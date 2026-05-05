@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prevención - Motores Warnes</title>
+<link rel="stylesheet" href="prevencion.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="logo">
+    <img src="imagenes/logowarnes.png" height="30px" alt="Motores Warnes">
+    <span>Motores Warnes</span>
+  </div>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="motores.html">Motores</a>
+    <a href="prevencion.html" class="active">Prevención</a>
+    <a href="contacto.html">Contáctanos</a>       
+  </nav>
+</header>
+
+<section class="alerta-estafas">
+    <div class="container-aviso animar">
+
+        <div class="header-aviso animar">
+            <h1>⚠️ AVISO IMPORTANTE</h1>
+            <h2>PREVENCIÓN DE ESTAFAS</h2>
+        </div>
+        
+        <div class="cuerpo-aviso animar">
+            <p class="intro">En <strong>Warnes Motores</strong> trabajamos para brindarte una compra segura.</p>
+            
+            <p>Debido a la creciente cantidad de estafas en redes sociales, tené en cuenta:</p>
+            
+            <ul class="puntos-clave">
+                <li class="animar">✔️ Solo comercializamos a través de canales oficiales.</li>
+                <li class="animar">✔️ Toda operación tiene comprobantes y documentación.</li>
+            </ul>
+
+            <div class="nota-importante animar">
+                <p><strong>⚠️ Importante:</strong> No realices pagos sin verificar.</p>
+            </div>
+
+            <p class="consulta animar">📲 Ante cualquier duda, comunicate con nosotros.</p>
+        </div>
+    </div>
+</section>
+
+<section class="clientes-entregas">
+    <div class="titulo-entregas animar">
+        <h2>Entregas Exitosas</h2>
+        <span>Clientes que ya confían en nosotros</span>
+    </div>
+
+    <div class="galeria-clientes">
+        <div class="cliente-card animar">
+            <img src="imagenes/cliente1.jpeg" alt="Cliente 1">
+        </div>
+        <div class="cliente-card animar">
+            <img src="imagenes/cliente2.jpeg" alt="Cliente 2">
+        </div>
+        <div class="cliente-card animar">
+            <img src="imagenes/cliente3.jpeg" alt="Cliente 3">
+        </div>
+    </div>
+</section>
+
+<!-- 📍 UBICACIÓN -->
+<section class="ubicacion">
+    <div class="ubicacion-contenido animar">
+        <div class="ubicacion-texto">
+            <h2>📍 Ubicación</h2>
+            <p>Encontranos en <strong>Av. Warnes 1526</strong>, CABA. Estamos en el corazón de la zona de repuestos y motores, con fácil acceso desde las principales avenidas.</p>
+        </div>
+        <div class="ubicacion-mapa">
+            <!-- Usa la imagen del mapa que adjuntaste. Cambia la ruta si es necesario -->
+            <img src="imagenes/mapa.jpeg" alt="Mapa de ubicación Motores Warnes">
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-left">
+    <p>Motores Warnes</p>
+    <h2>Conéctate Con Nosotros</h2>
+  </div>
+
+  <div class="footer-right">
+    <div class="info">
+      <p> 11-6761-4171  / 11-2271-1400</p>
+      <p>Envíos a todo el país </p>
+      <p>Av. Warnes, 1526</p>
+    </div>
+  </div>
+
+  <div class="copy">
+    © 2026 by Motores Warnes.
+  </div>
+</footer>
+
+<!-- 🔥 SCRIPT -->
+<script>
+const elementos = document.querySelectorAll('.animar');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.2 });
+
+elementos.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

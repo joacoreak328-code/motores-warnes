@@ -1,0 +1,246 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #000;
+  color: #cbd5f5;
+  line-height: 1.6;
+}
+
+/* IMÁGENES GENERALES */
+img{
+  max-width:100%;
+  height:auto;
+  display:block;
+}
+
+/* NAV */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  flex-wrap: wrap;
+  background-color: rgb(2, 24, 57);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #495680;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* <-- Mantener consistencia con index: tamaño y comportamiento de la imagen del logo --> */
+.logo img{
+  height: 32px;
+  width: auto;
+  max-width: none;
+  object-fit: contain;
+}
+
+.nav nav {
+  display: flex;
+  gap: 25px;
+}
+
+.nav a {
+  color: #aab4d6;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: 0.3s;
+}
+
+.nav a:hover, .nav a.active {
+  color: #fff;
+}
+
+/* SERVICIOS */
+.servicios {
+  padding: 80px 10%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.servicios h2 {
+  font-size: 48px;
+  margin-bottom: 50px;
+  color: #aab4d6;
+  border-left: 5px solid #495680;
+  padding-left: 20px;
+}
+
+/* LISTA */
+.motores {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* TARJETAS */
+.motor-card {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  border: 1px solid #495680;
+  background: #050505;
+  transition: all 0.4s ease;
+  overflow: hidden;
+  align-items: center;
+}
+
+.motor-card:hover {
+  transform: translateY(-5px);
+  border-color: #fff;
+  box-shadow: 0 5px 20px rgba(170, 180, 214, 0.2);
+}
+
+.motor-card img {
+  width: 100%;
+  height: 350px;
+  object-fit: contain;
+  background-color: #000;
+  padding: 15px;
+}
+
+/* STATS */
+.stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  padding: 30px;
+}
+
+.stats div {
+  border: 1px solid #495680;
+  padding: 15px;
+  background: #0a0a0a;
+}
+
+.stats span {
+  display: block;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #777;
+  margin-bottom: 5px;
+}
+
+.stats p {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #fff;
+}
+
+/* FOOTER (SIN MODIFICAR) */
+footer {
+  margin-top: 100px;
+  border-top: 1px solid #495680;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 80px 10%;
+  background: #020202;
+}
+
+.footer-left h2 {
+  font-size: 36px;
+  line-height: 1.1;
+  color: #aab4d6;
+}
+
+.footer-right a {
+  color: #aab4d6;
+  text-decoration: none;
+  margin-left: 15px;
+  font-size: 0.85rem;
+}
+
+.footer-right a:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+
+.copy {
+  grid-column: 1 / 3;
+  text-align: right;
+  margin-top: 60px;
+  font-size: 12px;
+  color: #555;
+}
+
+/* =========================================
+   🔥 ANIMACIÓN (MEJORADA)
+   ========================================= */
+
+.animar {
+  opacity: 0;
+  transform: translateY(40px) scale(0.95);
+
+  transition: all 0.8s ease;
+}
+
+.animar.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  filter: blur(0);
+}
+
+/* 🎯 efecto cascada en tarjetas */
+.motor-card:nth-child(1){transition-delay:0.1s;}
+.motor-card:nth-child(2){transition-delay:0.2s;}
+.motor-card:nth-child(3){transition-delay:0.3s;}
+.motor-card:nth-child(4){transition-delay:0.4s;}
+.motor-card:nth-child(5){transition-delay:0.5s;}
+.motor-card:nth-child(6){transition-delay:0.6s;}
+.motor-card:nth-child(7){transition-delay:0.7s;}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .nav {
+    padding: 20px;
+    justify-content: center;
+  }
+
+  .servicios {
+    padding: 40px 20px;
+  }
+
+  .servicios h2 {
+    font-size: 32px;
+  }
+
+  .motor-card {
+    grid-template-columns: 1fr;
+  }
+
+  .motor-card img {
+    height: 300px;
+  }
+
+  footer {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .copy {
+    grid-column: 1;
+    text-align: center;
+  }
+}
+
+/* Ajustes adicionales para mantener paridad con index en móviles (logo tamaño y espaciado) */
+@media (max-width: 768px){
+  .nav{
+    padding: 20px;
+    justify-content:center;
+  }
+}

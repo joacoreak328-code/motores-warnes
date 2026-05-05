@@ -1,0 +1,235 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body{
+  background:#000;
+  color:#cbd5f5;
+  line-height: 1.6;
+}
+
+/* IMÁGENES GENERALES */
+img{
+  max-width:100%;
+  height:auto;
+  display:block;
+}
+
+/* NAV */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  flex-wrap: wrap;
+  background-color: rgb(2, 24, 57);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #495680;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* ajuste para que el logo tenga mismo tamaño/comportamiento que en index/motores */
+.logo img{
+  height: 32px;
+  width: auto;
+  max-width: none;
+  object-fit: contain;
+}
+
+.nav nav {
+  display: flex;
+  gap: 25px;
+}
+
+.nav a {
+  color: #aab4d6;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: 0.3s;
+}
+
+.nav a:hover, .nav a.active {
+  color: #fff;
+}
+
+/* AVISO */
+.alerta-estafas {
+    padding: 80px 10%;
+    display: flex;
+    justify-content: center;
+}
+
+.container-aviso {
+    max-width: 800px;
+    border: 2px solid #495680;
+    background: #050505;
+    padding: 40px;
+}
+
+.header-aviso {
+    text-align: center;
+    border-bottom: 1px solid #495680;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+}
+
+.header-aviso h1 {
+    color: #ff4d4d;
+}
+
+.header-aviso h2 {
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+.cuerpo-aviso p {
+    margin-bottom: 20px;
+}
+
+.puntos-clave {
+    list-style: none;
+}
+
+.puntos-clave li {
+    margin-bottom: 15px;
+    border-left: 3px solid #495680;
+    padding-left: 10px;
+}
+
+.nota-importante {
+    background: rgba(255, 77, 77, 0.1);
+    padding: 20px;
+    border: 1px dashed #ff4d4d;
+}
+
+.consulta {
+    text-align: center;
+}
+
+/* GALERÍA */
+.clientes-entregas {
+    padding: 60px 10%;
+}
+
+.titulo-entregas {
+    margin-bottom: 40px;
+    border-left: 5px solid #495680;
+    padding-left: 20px;
+}
+
+.galeria-clientes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.cliente-card {
+    border: 1px solid #495680;
+    background: #050505;
+    height: 350px;
+    overflow: hidden;
+}
+
+.cliente-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* 📍 UBICACIÓN */
+.ubicacion {
+  padding: 60px 10%;
+  background: #050505;
+  border-top: 1px solid #495680;
+  border-bottom: 1px solid #495680;
+}
+
+.ubicacion-contenido {
+  display: grid;
+  grid-template-columns: 1.2fr 1.8fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.ubicacion-texto h2 {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.ubicacion-texto p {
+  color: #cbd5f5;
+}
+
+.ubicacion-mapa {
+  border: 1px solid #495680;
+  background: #000;
+  padding: 10px;
+}
+
+/* FOOTER (igual) */
+.footer {
+  border-top: 1px solid #495680;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 80px 10%;
+  background: #020202;
+  margin-top: 80px;
+}
+
+/* 🔥 ANIMACIÓN PRO */
+.animar {
+  opacity: 0;
+  transform: translateY(40px) scale(0.95);
+  transition: all 0.8s ease;
+}
+
+.animar.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  filter: blur(0);
+}
+
+/* efecto cascada */
+.cliente-card:nth-child(1){transition-delay:0.1s;}
+.cliente-card:nth-child(2){transition-delay:0.3s;}
+.cliente-card:nth-child(3){transition-delay:0.5s;}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .galeria-clientes {
+    grid-template-columns: 1fr;
+  }
+
+  .footer {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .ubicacion-contenido {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px){
+  .nav{
+    padding: 20px;
+    justify-content: center;
+  }
+
+  .ubicacion {
+    padding: 40px 5%;
+  }
+}

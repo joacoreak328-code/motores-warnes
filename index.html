@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Motores Warnes</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="logo">
+    <img src="imagenes/logowarnes.png" alt="logo">
+    <span>Motores Warnes</span>
+  </div>
+  <nav>
+    <a href="index.html" class="active">Inicio</a>
+    <a href="motores.html">Motores</a>
+    <a href="prevencion.html" >Prevención</a>
+    <a href="contacto.html">Contáctanos</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-content animar">
+    <h1>Tu Desarmadero de Confianza</h1>
+    <p>Expertos en comercialización de motores.</p>
+    <a href="contacto.html" class="btn-primario">Contáctanos</a>
+  </div>
+</section>
+
+<section class="nosotros">
+  <h2 class="animar">Nosotros</h2>
+  <div class="nosotros-grid">
+    <div class="nosotros-img-wrapper animar">
+      <img src="imagenes/sobrenosotros.jpeg">
+    </div>
+    <div class="texto animar">
+      <span>¿Quiénes somos?</span>
+      <p>
+        En Warnes Motores nos especializamos en la venta de motores completos y semiarmados para todo tipo de vehículos. Trabajamos con productos seleccionados, controlados y listos para colocar, garantizando funcionamiento y procedencia.
+
+Contamos con stock permanente y motores para desarme. Te damos soluciones rápidas y seguras.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="servicios">
+  <h2 class="animar">Servicios</h2>
+  <div class="servicios-grid">
+    <div class="img-servicios animar">
+      <img src="imagenes/servicios.jpeg">
+    </div>
+    <div class="col">
+      <div class="item animar">
+        <h3>Semiarmados</h3>
+        <p>Contamos con motores semiarmados.</p>
+      </div>
+      <div class="item animar">
+        <h3></h3>
+        <p></p>
+      </div>
+    </div>
+    <div class="col">
+      <div class="item animar">
+        <h3></h3>
+        <p></p>
+      </div>
+      <div class="item animar">
+        <h3>Motores completos</h3>
+        <p>Listos para su uso.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="horario animar">
+  <h2>Horario de Atención</h2>
+  <span></span>
+  <h3>Lunes a Viernes: 9 AM - 5 PM</h3>
+</section>
+
+<footer class="footer">
+  <div class="left">
+    <p>Motores Warnes</p>
+    <h2>Conéctate con nosotros</h2>
+  </div>
+  <div class="right">
+    <p>11-6761-4171 / 11-2271-1400</p>
+    <p>Envíos a todo el país</p>
+    <p>Av. Warnes, 1526</p>
+  </div>
+</footer>
+
+<script>
+const elementos = document.querySelectorAll('.animar');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.2 });
+
+elementos.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

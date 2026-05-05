@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servicios</title>
+  <link rel="stylesheet" href="motores.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="logo">
+    <img src="imagenes/logowarnes.png" alt="logo">
+    <span>Motores Warnes</span>
+  </div>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="motores.html" class="active">Motores</a>
+    <a href="prevencion.html">Prevención</a>
+    <a href="contacto.html">Contáctanos</a>       
+  </nav>
+</header>
+
+<section class="servicios">
+  <h2 class="animar">Motores</h2>
+
+  <div class="motores">
+
+    <!-- MOTOR 1 -->
+    <div class="motor-card animar">
+      <img src="imagenes/bmw twinpowerturbo.jpeg" alt="BMW motor">
+      <div class="stats">
+        <div><span>Marca</span><p>BMW</p></div>
+        <div><span>Modelo</span><p>N20 X1/329 turbo HP</p></div>
+        <div><span>Cilindrada</span><p>2.0L</p></div>
+        <div><span>Año</span><p>2014</p></div>
+      </div>
+    </div>
+
+    <div class="motor-card animar">
+      <img src="imagenes/ramv8.jpeg" alt="RAM V8">
+      <div class="stats">
+        <div><span>Marca</span><p>Dodge</p></div>
+        <div><span>Modelo</span><p>RAM 2500</p></div>
+        <div><span>Cilindrada</span><p>6.7L</p></div>
+        <div><span>Año</span><p>2008</p></div>
+      </div>
+    </div>
+
+    <div class="motor-card animar">
+      <img src="imagenes/auditfsi.jpeg" alt="Audi TFSI">
+      <div class="stats">
+        <div><span>Marca</span><p>Audi</p></div>
+        <div><span>Modelo</span><p>Q5 TFSI</p></div>
+        <div><span>Cilindrada</span><p>2.0L</p></div>
+        <div><span>Año</span><p>2008</p></div>
+      </div>
+    </div>
+
+    <div class="motor-card animar">
+      <img src="imagenes/civic.jpeg" alt="Honda Civic motor">
+      <div class="stats">
+        <div><span>Marca</span><p>Honda</p></div>
+        <div><span>Modelo</span><p>Civic D16Y8</p></div>
+        <div><span>Cilindrada</span><p>1.6L</p></div>
+        <div><span>Sistema</span><p>VTEC</p></div>
+      </div>
+    </div>
+
+    <div class="motor-card animar">
+      <img src="imagenes/tuareg.jpeg" alt="Touareg motor">
+      <div class="stats">
+        <div><span>Marca</span><p>Wolkswagen</p></div>
+        <div><span>Modelo</span><p>Toaureg V8 FSI</p></div>
+        <div><span>Cilindrada</span><p>4.2L</p></div>
+        <div><span>Año</span><p>2009</p></div>
+      </div>
+    </div>
+
+    <div class="motor-card animar">
+      <img src="imagenes/audia3.jpeg" alt="Audi A3">
+      <div class="stats">
+        <div><span>Marca</span><p>Audi</p></div>
+        <div><span>Modelo</span><p>A3 TDI</p></div>
+        <div><span>Cilindrada</span><p>2.0L</p></div>
+        <div><span>Año</span><p>2008</p></div>
+      </div>
+    </div>
+
+    <div class="motor-card animar">
+      <img src="imagenes/auditsi.jpeg" alt="Audi TSI">
+      <div class="stats">
+        <div><span>Marca</span><p>Audi</p></div>
+        <div><span>Modelo</span><p>Golf Gti mk7 / tiguan 2.0 TFSI</p></div>
+        <div><span>Cilindrada</span><p>2.0L</p></div>
+        <div><span>Año</span><p>2018</p></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-left">
+    <p>Motores Warnes</p>
+    <h2>Conéctate Con Nosotros</h2>
+  </div>
+
+  <div class="footer-right">
+    <div>
+      <p> 11-6761-4171 / 11-2271-1400</p>
+      <p>Envíos a todo el país </p>
+      <p>Av. Warnes, 1526</p>
+    </div>
+  </div>
+
+  <div class="copy">
+    © 2026 by Motores Warnes.
+  </div>
+</footer>
+
+<!-- 🔥 MISMO SCRIPT QUE INDEX -->
+<script>
+const elementos = document.querySelectorAll('.animar');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.08 });
+
+elementos.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
